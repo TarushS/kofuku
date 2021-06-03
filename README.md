@@ -36,7 +36,48 @@ Love the content? Consider supporting me __on these platforms:__
 
 ## Installation (Arch-based distros) WIP
 __NOTE:__ This guide uses ``~/Downloads`` as the default path for cloning repos
+1. Update your repositories:
 
+		 sudo pacman -Syy
+2. Upgrade your system
+
+		 sudo pacman -Syu
+3. Install __bspwm__:
+
+	Install required dependencies:
+
+		 sudo pacman -S base_devel git vim xcb-util libxcb lib32-libxcb alsa-lib
+	Clone the repository
+	
+		 cd ~/Downloads
+		 git clone https://github.com/baskerville/bspwm.git
+	Compiple and install bspwm
+	
+		 cd bspwm 
+		 make
+		 sudo make install
+	Copy bspwm config files:
+	
+		 mkdir ~/.config/bspwm
+		 cp examples/bspwmrc ~/.config/bspwm
+		 chmod +x ~/.config/bspwm/bspwmrc
+		 cd ..
+
+4. Install __sxhkd__:
+
+		 Clone the repository:
+
+		 git clone https://github.com/baskerville/sxhkd.git
+	Compile and install sxhkd:
+			 
+		 cd sxhkd
+		 make
+		 sudo make install
+	Copy sxhkd configuration files:
+			
+		 mkdir ~/.config/sxhkd
+		 cp ../bspwm/examples/sxhkdrc ~/.config/sxhkd
+		 cd ..
 ## Installation Steps (Ubuntu-based distros)(Tested on Pop! OS 20.04) WIP
 __NOTE:__ This guide uses ``~/Downloads`` as the default path for cloning repos
 1. Update your repositories:
