@@ -46,7 +46,7 @@ __NOTE:__ This guide uses ``~/Downloads`` as the default path for cloning repos
 
 	Install required dependencies:
 
-		 sudo pacman -S base_devel git vim xcb-util libxcb lib32-libxcb alsa-lib
+		 sudo pacman -S base_devel git vim libxcb xcb-util xcb-util-wm xcb-util-keysyms make
 	Clone the repository
 	
 		 cd ~/Downloads
@@ -65,19 +65,25 @@ __NOTE:__ This guide uses ``~/Downloads`` as the default path for cloning repos
 
 4. Install __sxhkd__:
 
-		 Clone the repository:
-
-		 git clone https://github.com/baskerville/sxhkd.git
-	Compile and install sxhkd:
-			 
-		 cd sxhkd
-		 make
-		 sudo make install
+		 sudo pacman -S sxhkd
 	Copy sxhkd configuration files:
 			
 		 mkdir ~/.config/sxhkd
 		 cp ../bspwm/examples/sxhkdrc ~/.config/sxhkd
 		 cd ..
+5. Install Polybar:
+
+        Install required dependencies:
+
+		 sudo pacman -S cmake yay
+	Install polybar from AUR
+
+		 yay -S polybar
+
+6. Install picom and rofi
+
+		 sudo pacman -S picom rofi
+7.  
 ## Installation Steps (Ubuntu-based distros)(Tested on Pop! OS 20.04) WIP
 __NOTE:__ This guide uses ``~/Downloads`` as the default path for cloning repos
 1. Update your repositories:
